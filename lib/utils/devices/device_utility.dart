@@ -34,6 +34,10 @@ void setFullScreen(bool enable) {
       enable ? SystemUiMode.immersiveSticky : SystemUiMode.edgeToEdge);
 }
 
+Size getScreenSize() {
+  return MediaQuery.of(Get.context!).size;
+}
+
 double getScreenHeight() {
   return MediaQuery.of(Get.context!).size.height;
 }
