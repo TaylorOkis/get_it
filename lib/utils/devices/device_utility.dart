@@ -10,112 +10,112 @@ class GetItDeviceUtils {
   static void hideKeyboard(BuildContext context) {
     FocusScope.of(context).requestFocus(FocusNode());
   }
-}
 
-Future<void> setStatusBarColor(Color color) async {
-  SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(statusBarColor: color),
-  );
-}
-
-bool isLandscapeOrientation(BuildContext context) {
-  final viewInsets = View.of(context).viewInsets;
-  return viewInsets.bottom == 0;
-}
-
-bool isPortraitOrientation(BuildContext context) {
-  final viewInsets = View.of(context).viewInsets;
-  return viewInsets.bottom != 0;
-}
-
-void setFullScreen(bool enable) {
-  SystemChrome.setEnabledSystemUIMode(
-      enable ? SystemUiMode.immersiveSticky : SystemUiMode.edgeToEdge);
-}
-
-Size getScreenSize() {
-  return MediaQuery.of(Get.context!).size;
-}
-
-double getScreenHeight() {
-  return MediaQuery.of(Get.context!).size.height;
-}
-
-double getScreenWidth(BuildContext context) {
-  return MediaQuery.of(context).size.width;
-}
-
-double getPixelRatio() {
-  return MediaQuery.of(Get.context!).devicePixelRatio;
-}
-
-double getStatusBarHeight() {
-  return MediaQuery.of(Get.context!).padding.top;
-}
-
-double getBottomNavigationBarHeight() {
-  return kBottomNavigationBarHeight;
-}
-
-double getAppBarHeight() {
-  return kToolbarHeight;
-}
-
-double getKeyboardHeight() {
-  final viewInsets = MediaQuery.of(Get.context!).viewInsets;
-  return viewInsets.bottom;
-}
-
-Future<bool> isKeyboardVisible() async {
-  final viewInsets = View.of(Get.context!).viewInsets;
-  return viewInsets.bottom > 0;
-}
-
-Future<bool> isPhysicalDevice() async {
-  return defaultTargetPlatform == TargetPlatform.android ||
-      defaultTargetPlatform == TargetPlatform.iOS;
-}
-
-void vibrate(Duration duration) {
-  HapticFeedback.vibrate();
-  Future.delayed(duration, () => HapticFeedback.vibrate());
-}
-
-Future<void> setPrefferedOrientation(
-    List<DeviceOrientation> orientations) async {
-  await SystemChrome.setPreferredOrientations(orientations);
-}
-
-void hideStatusBar() {
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-}
-
-void showStatusBar() {
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-      overlays: SystemUiOverlay.values);
-}
-
-Future<bool> hasInternetConnection() async {
-  try {
-    final result = await InternetAddress.lookup('example.com');
-    return result.isNotEmpty && result[0].rawAddress.isNotEmpty;
-  } on SocketException catch (_) {
-    return false;
+  static Future<void> setStatusBarColor(Color color) async {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: color),
+    );
   }
-}
 
-bool isIOS() {
-  return Platform.isIOS;
-}
+  static bool isLandscapeOrientation(BuildContext context) {
+    final viewInsets = View.of(context).viewInsets;
+    return viewInsets.bottom == 0;
+  }
 
-bool isAndroid() {
-  return Platform.isAndroid;
-}
+  static bool isPortraitOrientation(BuildContext context) {
+    final viewInsets = View.of(context).viewInsets;
+    return viewInsets.bottom != 0;
+  }
 
-void launchUrl(String url) async {
-  if (await canLaunchUrlString(url)) {
-    await launchUrlString(url);
-  } else {
-    throw 'Could not launch $url';
+  static void setFullScreen(bool enable) {
+    SystemChrome.setEnabledSystemUIMode(
+        enable ? SystemUiMode.immersiveSticky : SystemUiMode.edgeToEdge);
+  }
+
+  static Size getScreenSize() {
+    return MediaQuery.of(Get.context!).size;
+  }
+
+  static double getScreenHeight() {
+    return MediaQuery.of(Get.context!).size.height;
+  }
+
+  static double getScreenWidth() {
+    return MediaQuery.of(Get.context!).size.width;
+  }
+
+  static double getPixelRatio() {
+    return MediaQuery.of(Get.context!).devicePixelRatio;
+  }
+
+  static double getStatusBarHeight() {
+    return MediaQuery.of(Get.context!).padding.top;
+  }
+
+  static double getBottomNavigationBarHeight() {
+    return kBottomNavigationBarHeight;
+  }
+
+  static double getAppBarHeight() {
+    return kToolbarHeight;
+  }
+
+  static double getKeyboardHeight() {
+    final viewInsets = MediaQuery.of(Get.context!).viewInsets;
+    return viewInsets.bottom;
+  }
+
+  static Future<bool> isKeyboardVisible() async {
+    final viewInsets = View.of(Get.context!).viewInsets;
+    return viewInsets.bottom > 0;
+  }
+
+  static Future<bool> isPhysicalDevice() async {
+    return defaultTargetPlatform == TargetPlatform.android ||
+        defaultTargetPlatform == TargetPlatform.iOS;
+  }
+
+  static void vibrate(Duration duration) {
+    HapticFeedback.vibrate();
+    Future.delayed(duration, () => HapticFeedback.vibrate());
+  }
+
+  static Future<void> setPrefferedOrientation(
+      List<DeviceOrientation> orientations) async {
+    await SystemChrome.setPreferredOrientations(orientations);
+  }
+
+  static void hideStatusBar() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+  }
+
+  static void showStatusBar() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
+  }
+
+  static Future<bool> hasInternetConnection() async {
+    try {
+      final result = await InternetAddress.lookup('example.com');
+      return result.isNotEmpty && result[0].rawAddress.isNotEmpty;
+    } on SocketException catch (_) {
+      return false;
+    }
+  }
+
+  static bool isIOS() {
+    return Platform.isIOS;
+  }
+
+  static bool isAndroid() {
+    return Platform.isAndroid;
+  }
+
+  static void launchUrl(String url) async {
+    if (await canLaunchUrlString(url)) {
+      await launchUrlString(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
