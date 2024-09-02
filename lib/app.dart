@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_it/features/authentication/screens/onboarding/onboarding.dart';
-
 import 'utils/theme/theme.dart';
 
 class GetItApp extends StatelessWidget {
