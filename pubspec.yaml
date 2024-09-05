@@ -1,6 +1,6 @@
 name: get_it
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -29,19 +29,19 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 flutter:
-
   uses-material-design: true
 
   assets:
     - assets/images/on_boarding_images/
     - assets/icons/
     - assets/logos/
+    - assets/images/animations
 
   fonts:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-light.ttf
-          weight: 300 
+          weight: 300
         - asset: assets/fonts/Poppins-Regular.ttf
           weight: 400
         - asset: assets/fonts/Poppins-Medium.ttf
