@@ -1,42 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../common/widgets/login_signup/form_divider.dart';
-import '../../../../utils/helpers/helper_functions.dart';
-import '../../../../common/widgets/login_signup/social_buttons.dart';
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/text_strings.dart';
-
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(GetItSizes.defaultSpace),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(GetItTexts.signUpTitle,
-                  style: Theme.of(context).textTheme.headlineMedium),
-              const SizedBox(height: GetItSizes.spaceBetweenSections),
-              const GetItSignUpForm(),
-              const SizedBox(height: GetItSizes.spaceBetweenSections),
-              GetItDivider(dividerText: GetItTexts.orSignUpWith.capitalize!),
-              const SizedBox(height: GetItSizes.spaceBetweenSections),
-              const GetItSocialButtons(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/text_strings.dart';
+import '../../../../../utils/helpers/helper_functions.dart';
 
 class GetItSignUpForm extends StatelessWidget {
   const GetItSignUpForm({
@@ -45,7 +13,6 @@ class GetItSignUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = GetItHelperFunctions.isDarkMode(context);
     return Form(
       child: Column(
         children: [
@@ -113,38 +80,7 @@ class GetItSignUpForm extends StatelessWidget {
                 child: Checkbox(value: true, onChanged: (value) {}),
               ),
               const SizedBox(width: GetItSizes.spaceBetweenItems),
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                        text: '${GetItTexts.iAgreeto} ',
-                        style: Theme.of(context).textTheme.bodySmall),
-                    TextSpan(
-                      text: '${GetItTexts.privacyPolicy} ',
-                      style: Theme.of(context).textTheme.bodyMedium!.apply(
-                            color:
-                                dark ? GetItColors.white : GetItColors.primary,
-                            decoration: TextDecoration.underline,
-                            decorationColor:
-                                dark ? GetItColors.white : GetItColors.primary,
-                          ),
-                    ),
-                    TextSpan(
-                        text: 'and ',
-                        style: Theme.of(context).textTheme.bodySmall),
-                    TextSpan(
-                      text: '${GetItTexts.termsofuse} ',
-                      style: Theme.of(context).textTheme.bodyMedium!.apply(
-                            color:
-                                dark ? GetItColors.white : GetItColors.primary,
-                            decoration: TextDecoration.underline,
-                            decorationColor:
-                                dark ? GetItColors.white : GetItColors.primary,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
+              const GetItTermsAndConditions(),
             ],
           ),
           const SizedBox(height: GetItSizes.spaceBetweenSections),
@@ -154,6 +90,45 @@ class GetItSignUpForm extends StatelessWidget {
               onPressed: null,
               child: Text(GetItTexts.createAccount),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class GetItTermsAndConditions extends StatelessWidget {
+  const GetItTermsAndConditions({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = GetItHelperFunctions.isDarkMode(context);
+    return Text.rich(
+      TextSpan(
+        children: [
+          TextSpan(
+              text: '${GetItTexts.iAgreeto} ',
+              style: Theme.of(context).textTheme.bodySmall),
+          TextSpan(
+            text: '${GetItTexts.privacyPolicy} ',
+            style: Theme.of(context).textTheme.bodyMedium!.apply(
+                  color: dark ? GetItColors.white : GetItColors.primary,
+                  decoration: TextDecoration.underline,
+                  decorationColor:
+                      dark ? GetItColors.white : GetItColors.primary,
+                ),
+          ),
+          TextSpan(text: 'and ', style: Theme.of(context).textTheme.bodySmall),
+          TextSpan(
+            text: '${GetItTexts.termsofuse} ',
+            style: Theme.of(context).textTheme.bodyMedium!.apply(
+                  color: dark ? GetItColors.white : GetItColors.primary,
+                  decoration: TextDecoration.underline,
+                  decorationColor:
+                      dark ? GetItColors.white : GetItColors.primary,
+                ),
           ),
         ],
       ),
