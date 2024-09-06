@@ -32,6 +32,7 @@ class GetItTexts {
   static const String verificationCode = "verification Code";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
+  static const String getItContinue = "Continue";
 
   static const String loginTitle = "Welcome back";
   static const String loginSubTitle =
@@ -41,14 +42,14 @@ class GetItTexts {
       "Don't worry sometimes people can forget password too. Enter your email and we will send you a password reset link.";
   static const String changeYourPasswordTitle = "Password Reset Email sent";
   static const String changeYourPasswordSubTitle =
-      "Your Account Security is our Priority! We've sent you a secure link to safely chang your password and keep your account protected.";
+      "Your account Security is our Priority! We've sent you a secure link to safely chang your password and keep your account protected.";
   static const String confirmEmail = "Verify your email address!";
   static const String confirmEmailSubTitle =
       "Congratulations! Your Account Exists: Verify your E-mail to start shopping and experience a world of unrivaled deals and personalized offers.";
   static const String emailNotReceivedMessage =
       "Didn't get the email? Check you junk/spam or resend it";
   static const String yourAccountCreatedTitle =
-      "Your Account successfully created!";
+      "Your account successfully created!";
   static const String yourAccountCreatedSubTitle =
       "Welcome to your ultimate shopping destination: Your account is created, unleash the joy of seamless online shopping!";
 }

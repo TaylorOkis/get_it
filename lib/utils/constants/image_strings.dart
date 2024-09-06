@@ -15,7 +15,7 @@ class GetItImages {
       "assets/images/on_boarding_images/sammy-line-delivery.gif";
 
   static const String confirmEmailImage =
-      "assets/images/animation/sammy-line-man-receives-a-mail.png";
+      "assets/images/animations/sammy-line-man-receives-a-mail.png";
   static const String successImage =
-      "assets/images/animation/sammy-line-success.png";
+      "assets/images/animations/sammy-line-success.png";
 }

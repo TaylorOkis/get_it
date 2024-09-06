@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
+import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
-import '../../../utils/constants/text_strings.dart';
 
 class GetItSocialButtons extends StatelessWidget {
   const GetItSocialButtons({
@@ -24,7 +24,7 @@ class GetItSocialButtons extends StatelessWidget {
             icon: Image(
               width: GetItSizes.iconMedium,
               height: GetItSizes.iconMedium,
-              image: AssetImage(GetItTexts.google),
+              image: AssetImage(GetItImages.google),
             ),
           ),
         ),
@@ -39,7 +39,7 @@ class GetItSocialButtons extends StatelessWidget {
             icon: Image(
               width: GetItSizes.iconMedium,
               height: GetItSizes.iconMedium,
-              image: AssetImage(GetItTexts.facebook),
+              image: AssetImage(GetItImages.facebook),
               fit: BoxFit.fill,
             ),
           ),

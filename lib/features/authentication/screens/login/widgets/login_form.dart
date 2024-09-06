@@ -47,11 +47,11 @@ class LoginForm extends StatelessWidget {
             ],
           ),
           const SizedBox(height: GetItSizes.spaceBetweenSections),
-          const SizedBox(
+          SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: null,
-              child: Text(GetItTexts.signIn),
+              onPressed: () {},
+              child: const Text(GetItTexts.signIn),
             ),
           ),
           const SizedBox(height: GetItSizes.spaceBetweenItems),
