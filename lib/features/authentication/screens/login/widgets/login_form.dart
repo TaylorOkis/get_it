@@ -6,6 +6,7 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
+import '../../../../shop/navigation_menu.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -51,7 +52,7 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.to(() => NavigationMenu()),
               child: const Text(GetItTexts.signIn),
             ),
           ),
