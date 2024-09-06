@@ -33,6 +33,8 @@ class GetItTexts {
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
   static const String getItContinue = "Continue";
+  static const String submit = "Submit";
+  static const String done = "Done";
 
   static const String loginTitle = "Welcome back";
   static const String loginSubTitle =

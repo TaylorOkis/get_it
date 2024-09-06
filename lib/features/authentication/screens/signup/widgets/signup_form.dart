@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_it/features/authentication/screens/signup/verify_email.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../../common/widgets/verify_email_screen/verify_email.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import 'terms_and_conditions.dart';

@@ -2,25 +2,27 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../common/widgets/success_screen/success_screen.dart';
-import '../../../../utils/constants/image_strings.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/text_strings.dart';
-import '../../../../utils/devices/device_utility.dart';
-import '../login/login.dart';
+import '../success_screen/success_screen.dart';
+import '../../../utils/constants/image_strings.dart';
+import '../../../utils/constants/sizes.dart';
+import '../../../utils/constants/text_strings.dart';
+import '../../../utils/devices/device_utility.dart';
+import '../../../features/authentication/screens/login/login.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+  const VerifyEmailScreen({super.key, this.onPressed});
+
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        actions: const [
+        actions: [
           IconButton(
-            onPressed: null,
-            icon: Icon(CupertinoIcons.clear),
+            onPressed: onPressed,
+            icon: const Icon(CupertinoIcons.clear),
           )
         ],
       ),
@@ -74,7 +76,7 @@ class VerifyEmailScreen extends StatelessWidget {
             const SizedBox(height: GetItSizes.spaceBetweenItems),
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
+              child: TextButton(
                 onPressed: () {},
                 child: const Text(GetItTexts.resendEmail),
               ),
