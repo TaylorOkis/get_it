@@ -1,4 +1,10 @@
 class GetItTexts {
+  // -- GLOBAL Texts
+  static const String getItContinue = "Continue";
+  static const String submit = "Submit";
+  static const String done = "Done";
+
+  // -- OnBording Texts
   static const String onBoardingTitle1 = "Choose your product";
   static const String onBoardingTitle2 = "Select Payment Method";
   static const String onBoardingTitle3 = "Deliver at your door stop";
@@ -10,9 +16,7 @@ class GetItTexts {
   static const String onBoardingSubTitle3 =
       "From Oour Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
-  static const String homeAppBarTitle = "Good day for shopping";
-  static const String homeAppBarSubTitle = "Customer name";
-
+  // -- Authentication form Texts
   static const String firstName = "First Name";
   static const String lastName = "Last name";
   static const String email = "E-mail";
@@ -32,10 +36,8 @@ class GetItTexts {
   static const String verificationCode = "verification Code";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
-  static const String getItContinue = "Continue";
-  static const String submit = "Submit";
-  static const String done = "Done";
 
+  // -- Authenticaiton headings Text
   static const String loginTitle = "Welcome back";
   static const String loginSubTitle =
       "Discover limitless Choices and Convenience";
@@ -54,4 +56,8 @@ class GetItTexts {
       "Your account successfully created!";
   static const String yourAccountCreatedSubTitle =
       "Welcome to your ultimate shopping destination: Your account is created, unleash the joy of seamless online shopping!";
+
+  // -- Home
+  static const String homeAppBarTitle = "Good day for shopping";
+  static const String homeAppBarSubTitle = "Customer name";
 }
