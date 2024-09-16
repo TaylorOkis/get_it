@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../../../common/widgets/products/cart_menu_icon.dart';
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/text_strings.dart';
+import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../utils/constants/sizes.dart';
 import 'widgets/home_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,6 +18,8 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   GetItHomeAppBar(),
+                  SizedBox(height: GetItSizes.spaceBetweenSections),
+                  GetItSearchContainer(text: 'Search in Store')
                 ],
               ),
             ),
