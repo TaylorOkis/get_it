@@ -38,4 +38,9 @@ class GetItImages {
       "assets/icons/categories/icons8-sparkling-diamond-50.png";
   static const String electronicsIcon =
       "assets/icons/categories/icons8-smartphone-50.png";
+
+  // -- Promo Banners
+  static const String promoBanner1 = "assets/images/banners/promo-banner-1.png";
+  static const String promoBanner2 = "assets/images/banners/promo-banner-2.png";
+  static const String promoBanner3 = "assets/images/banners/promo-banner-3.png";
 }

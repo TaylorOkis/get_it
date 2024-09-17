@@ -40,6 +40,12 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+                padding: const EdgeInset.all(GetItSizes.defaultSpace),
+                child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(GetItSizes.medium)),
+                    child: const Image(image: AssetImage(GetItImages.promo))))
           ],
         ),
       ),
